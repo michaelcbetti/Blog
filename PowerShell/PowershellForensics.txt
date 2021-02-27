@@ -1,0 +1,2 @@
+Find the Processes running on a remote workstation
+`Get-CimInstance -ComputerName ***<workstation>*** -ClassName win32_Process | Select-Object CreationDate, ProcessName, ProcessID, CommandLine, Path, ParentProcessID | Out-File c:\temp\<workstation>PROCESSES.txt`
